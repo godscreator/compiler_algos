@@ -311,7 +311,7 @@ class LR0_parser:
         self.G = G
 
     def generate(self):
-        AugG, ditems, dtrans = LR0_item.getLR0items(G)
+        AugG, ditems, dtrans = LR0_item.getLR0items(self.G)
 
         self.AugG = AugG
         # get follow of all symbols
