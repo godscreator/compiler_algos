@@ -23,9 +23,9 @@ try:
 except ParsingError:
     print(action)
     print("Parsing Error")
-except AmbigousGrammarException:
+except AmbiguousGrammarException:
     print(action)
-    print("Ambigous grammar Error")
+    print("Ambiguous grammar Error")
 
 
 s1 = """E

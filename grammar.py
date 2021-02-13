@@ -40,8 +40,8 @@ class Grammar:
             if p == "":
                 break
             p = p.split("->")
-            p[1] = p[1].split("|")
-            for j in p[1]:
+            q = p[1].split("|")
+            for j in q:
                 P.append(Rule(p[0].strip(), [i.strip() for i in j.split()]))
 
         return Grammar(S, T, V, P)
@@ -58,8 +58,8 @@ class Grammar:
         for j in pt:
             p = j.split("->")
             p[1] = p[1].split("|")
-            for j in p[1]:
-                P.append(Rule(p[0].strip(), [i.strip() for i in j.split()]))
+            for k in p[1]:
+                P.append(Rule(p[0].strip(), [i.strip() for i in k.split()]))
         return Grammar(S, T, V, P)
 
     # print grammar
